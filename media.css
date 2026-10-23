@@ -1130,13 +1130,3 @@
         font-size: 32px;
     }
 }
-
-
-/* =========================================================
-   touch screens: show chef social icons (no hover available)
-   ========================================================= */
-@media (hover: none) {
-    .our-chef .card .img .chef-contact {
-        bottom: 10px;
-    }
-}
