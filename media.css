@@ -1,0 +1,1142 @@
+/* =========================================================
+   media.css  -  responsive rules
+   Breakpoints: 1400 / 1200 / 992 / 564 / 400
+   (must be linked AFTER style.css)
+   ========================================================= */
+
+/* hero animation used when the hero switches to normal flow layout */
+@keyframes view-up-m {
+    from {
+        transform: translateY(60px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* ---------- safe rules: no visual change on big screens ---------- */
+.food .crisp {
+    max-width: 100%;
+}
+
+.cards .card {
+    max-width: 100%;
+}
+
+.view1 h2,
+.view2 h2,
+.view3 h2 {
+    font-size: min(200px, 11.5vw);
+}
+
+.section .first-text,
+.section .last-text {
+    font-size: min(150px, 8vw);
+}
+
+/* hero radio inputs: hidden (labels in .choses still switch the views) */
+.header-bg>input[type="radio"] {
+    display: none;
+}
+
+/* burger menu helpers: checkbox + close button are never visible by default */
+#menu-toggle {
+    display: none;
+}
+
+.menu-close {
+    display: none;
+}
+
+
+/* =========================================================
+   <= 1400px
+   ========================================================= */
+@media (max-width: 1400px) {
+
+    /* nav */
+    .nav ul {
+        gap: 20px;
+    }
+
+    .nav .phone span a {
+        font-size: 24px;
+    }
+
+    .nav .drop {
+        width: 1000px;
+        height: 360px;
+        left: -150px;
+    }
+
+    .nav .drop img {
+        width: 240px;
+    }
+
+    /* categories */
+    .fast-food {
+        height: auto;
+    }
+
+    .food {
+        margin: 0 auto 80px;
+    }
+
+    .food .crisp {
+        width: 100%;
+        max-width: 250px;
+        height: 250px;
+    }
+
+    .food .crisp p {
+        font-size: 21px;
+    }
+
+    /* about shop */
+    .about-shop {
+        height: auto;
+        gap: 20px;
+    }
+
+    .about-shop .left {
+        width: 58%;
+    }
+
+    .about-shop .right {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .about-shop .left .text-bar h2 {
+        font-size: 50px;
+    }
+
+    .about-shop .left .text-bar p {
+        font-size: 16px;
+    }
+
+    .about-shop .left .img-bar img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .about-shop .right .img-bar2 {
+        margin-bottom: 60px;
+    }
+
+    .about-shop .right .img-bar2 img {
+        width: 300px;
+    }
+
+    .about-shop .right .text-bar2 .up .text1 h3,
+    .about-shop .right .text-bar2 .down .text2 h3 {
+        font-size: 36px;
+    }
+
+    /* dessert cards */
+    .cards {
+        gap: 20px;
+    }
+
+    .cards .card {
+        width: 100%;
+    }
+
+    .cards .card h2 {
+        font-size: 34px;
+    }
+
+    .cards .card h3 {
+        font-size: 30px;
+    }
+
+    /* offers */
+    .off .today {
+        width: auto;
+        flex: 1;
+        min-width: 0;
+    }
+
+    .off .today h2 {
+        font-size: 45px;
+    }
+
+    .off .today .arow {
+        width: 90px;
+        right: 35%;
+        bottom: 120px;
+    }
+
+    .off .today .aps {
+        right: 18%;
+    }
+
+    /* chefs */
+    .our-chef .card {
+        width: 280px;
+    }
+
+    .our-chef .card:first-of-type {
+        left: 20px;
+    }
+
+    .our-chef .card:last-of-type {
+        right: 20px;
+    }
+
+    .our-chef .card .img .chef-contact {
+        gap: 10px;
+        width: 90%;
+    }
+
+    /* why choose */
+    .section {
+        padding: 100px 30px;
+    }
+
+    .section .main .left,
+    .section .main .right {
+        padding: 20px;
+    }
+
+    /* feedback */
+    .feed .article .left .text {
+        padding: 80px 160px 80px 30px;
+        font-size: 17px;
+    }
+
+    .feed .article .left .text br {
+        display: none;
+    }
+
+    .feed .article .left .rate {
+        padding: 25px 220px 25px 20px;
+        right: 60px;
+    }
+}
+
+
+/* =========================================================
+   <= 1200px
+   ========================================================= */
+@media (max-width: 1200px) {
+
+    img {
+        max-width: 100%;
+    }
+
+    /* titles */
+    .title {
+        height: auto;
+        gap: 15px;
+        margin-bottom: 70px;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    .title h2 {
+        font-size: 48px;
+    }
+
+    /* nav: links stay visible, just tighter */
+    .nav {
+        width: 95%;
+        padding: 8px 20px;
+    }
+
+    .nav ul {
+        gap: 15px;
+    }
+
+    .nav ul li a {
+        font-size: 15px;
+    }
+
+    .nav .phone {
+        gap: 12px;
+    }
+
+    .nav .phone span a {
+        font-size: 22px;
+    }
+
+    /* hero: normal flow instead of absolute positions */
+    .header-bg {
+        min-height: 620px;
+        padding-bottom: 20px;
+    }
+
+    .header-bg>img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .view1,
+    .view2,
+    .view3 {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+        height: auto;
+        padding: 30px 20px 40px;
+        text-align: center;
+    }
+
+    .view1 h2,
+    .view2 h2,
+    .view3 h2 {
+        position: static;
+        transform: translateY(60px);
+        width: 100%;
+        height: auto;
+        font-size: 100px;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        animation-name: view-up-m;
+    }
+
+    .view1 img,
+    .view2 img,
+    .view3 img {
+        position: static;
+        transform: translateY(60px);
+        display: block;
+        margin: 0 auto 25px;
+        width: min(80%, 520px);
+        height: auto;
+        animation-name: view-up-m;
+    }
+
+    .view1 .smallp,
+    .view2 .smallp,
+    .view3 .smallp {
+        position: static;
+        transform: translateY(60px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        animation-name: view-up-m;
+    }
+
+    .view1 .smallp p br,
+    .view2 .smallp p br,
+    .view3 .smallp p br {
+        display: none;
+    }
+
+    /* hero selector becomes a normal row under the nav */
+    .choses {
+        position: relative;
+        right: auto;
+        top: auto;
+        width: max-content;
+        margin: 30px auto 0;
+        padding: 12px;
+        flex-flow: row;
+        gap: 10px;
+        border-radius: 20px;
+    }
+
+    .choses label {
+        padding: 10px;
+    }
+
+    .choses label img {
+        width: 70px;
+        display: block;
+    }
+
+    /* categories */
+    .food {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px 20px;
+    }
+
+    .food .crisp {
+        justify-self: center;
+    }
+
+    /* about shop */
+    .about-shop .left {
+        width: 55%;
+    }
+
+    .about-shop .left .text-bar h2 {
+        font-size: 42px;
+    }
+
+    .about-shop .left .text-bar h2 br,
+    .about-shop .left .text-bar p br,
+    .about-shop .right .text-bar2 p br {
+        display: none;
+    }
+
+    .about-shop .right .img-bar2 img {
+        width: 240px;
+    }
+
+    /* dessert cards */
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .cards .card {
+        max-width: 380px;
+        justify-self: center;
+    }
+
+    /* offers */
+    .off .today .arow {
+        display: none;
+    }
+
+    .off .today .aps {
+        top: 20px;
+        right: 15px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .off .today .aps::after {
+        font-size: 14px;
+    }
+
+    .off .today h2 {
+        font-size: 40px;
+    }
+
+    /* chefs -> grid */
+    .our-chef {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px 20px;
+        justify-items: center;
+        margin-bottom: 60px;
+    }
+
+    .our-chef .card:first-of-type,
+    .our-chef .card:last-of-type {
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+
+    .our-chef .card {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* why choose -> stacked */
+    .section {
+        padding: 80px 30px;
+    }
+
+    .section .first-text {
+        font-size: 90px;
+        left: 0;
+        top: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .section .last-text {
+        font-size: 90px;
+        bottom: 0;
+        margin-top: 40px;
+    }
+
+    .section .main {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .section .main img {
+        order: -1;
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+    }
+
+    .section .main .left,
+    .section .main .right {
+        width: 100%;
+        padding: 0;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .section .main .left .one,
+    .section .main .left .two,
+    .section .main .right .three,
+    .section .main .right .four {
+        width: 100%;
+        max-width: 340px;
+        align-self: center;
+    }
+
+    /* feedback: each testimonial becomes a stacked card */
+    .feed {
+        padding: 100px 20px;
+    }
+
+    .feed .article {
+        gap: 30px;
+        margin-bottom: 60px;
+    }
+
+    .feed .article .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feed .article .left img:not(.sha) {
+        order: -1;
+        left: auto;
+        transform: none;
+        width: min(240px, 70%);
+        height: auto;
+        margin-bottom: -40px;
+    }
+
+    .feed .article .left .sha {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 44px;
+        align-self: flex-start;
+        margin: 0 0 -22px 25px;
+        z-index: 4;
+    }
+
+    .feed .article .left .text {
+        position: static;
+        top: auto;
+        padding: 50px 25px 40px;
+        border-radius: 40px;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .feed .article .left .rate {
+        position: static;
+        right: auto;
+        bottom: auto;
+        padding: 22px 25px;
+        border-radius: 40px;
+        margin-top: -20px;
+        width: 88%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feed .article .left .rate .icons {
+        justify-content: center;
+    }
+
+    .ice-cream .title {
+        font-size: 60px;
+    }
+
+    .ice-cream {
+        margin-bottom: 150px;
+    }
+
+    /* blog */
+    .blog {
+        gap: 25px;
+    }
+
+    .blog .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog .card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+    }
+
+    .blog .card .details {
+        padding-bottom: 10px;
+    }
+
+    .blog .card .details h2 {
+        font-size: 26px;
+    }
+
+    .blog .card .details h2 br {
+        display: none;
+    }
+
+    .blog .card .details .first {
+        flex-wrap: wrap;
+    }
+
+    /* lets talk */
+    .about .first {
+        font-size: 70px;
+    }
+
+    .about .all {
+        width: 95%;
+        gap: 20px;
+    }
+
+    .about .box {
+        width: auto;
+        flex: 1;
+        padding: 15px;
+    }
+}
+
+
+/* =========================================================
+   <= 992px
+   ========================================================= */
+@media (max-width: 992px) {
+
+    /* burger menu: icon sits left of the phone icon, panel slides in from the right */
+    .nav .phone .aside-icon {
+        order: -1;
+        cursor: pointer;
+    }
+
+    .nav ul {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(320px, 82vw);
+        height: 100vh;
+        flex-direction: column;
+        gap: 0;
+        padding: 80px 25px 30px;
+        background: #6e4135;
+        overflow-y: auto;
+        transform: translateX(100%);
+        transition: transform .4s ease;
+        z-index: 30;
+    }
+
+    #menu-toggle:checked~ul {
+        transform: translateX(0);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .nav ul li {
+        width: 100%;
+        padding: 14px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav ul li a {
+        font-size: 17px;
+    }
+
+    .nav .drop {
+        display: none;
+    }
+
+    .nav ul .drop2 {
+        position: static;
+        width: 100%;
+        background: transparent;
+        transform: none;
+        margin-top: 8px;
+        gap: 0;
+    }
+
+    .nav ul li .drop2 span {
+        padding: 8px 0 8px 10px;
+    }
+
+    .nav ul li .drop2 span a {
+        color: #fff;
+        font-size: 15px;
+    }
+
+    .nav ul li .drop2 span i {
+        color: #FE9924;
+    }
+
+    .nav ul li .drop2 span:not(:last-of-type) {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav ul li .drop2 span:hover {
+        transform: none;
+    }
+
+    .menu-close {
+        position: fixed;
+        top: 18px;
+        right: 20px;
+        z-index: 40;
+        width: 40px;
+        height: 40px;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #A4908A;
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    #menu-toggle:checked~.menu-close {
+        display: flex;
+    }
+
+    /* remove the two "slide" strips */
+    .slides,
+    .slid,
+    .slid2 {
+        display: none;
+    }
+
+    .title {
+        margin-bottom: 50px;
+    }
+
+    .title h2 {
+        font-size: 40px;
+    }
+
+    /* hero */
+    .view1 h2,
+    .view2 h2,
+    .view3 h2 {
+        font-size: 80px;
+    }
+
+    /* about shop -> stacked */
+    .about-shop {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .about-shop .left,
+    .about-shop .right {
+        width: 100%;
+    }
+
+    .about-shop .left {
+        gap: 30px;
+        align-items: stretch;
+    }
+
+    .about-shop .left .img-bar img {
+        width: 100%;
+    }
+
+    .about-shop .right {
+        align-items: center;
+        gap: 30px;
+    }
+
+    .about-shop .right .img-bar2 {
+        transform: rotate(-6deg);
+        margin-bottom: 20px;
+    }
+
+    .about-shop .right .img-bar2 img {
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .about-shop .right .text-bar2 {
+        gap: 30px;
+        width: 100%;
+    }
+
+    .about-shop .right .text-bar2 .up {
+        margin-bottom: 0;
+    }
+
+    .about-shop .left .text-bar h2 {
+        font-size: 38px;
+    }
+
+    /* offers -> stacked */
+    .off {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    .off .today {
+        width: 100%;
+        flex: none;
+        padding: 25px 20px;
+    }
+
+    .off .today .bo img {
+        max-width: 260px;
+    }
+
+    /* chefs */
+    .our-chef .card {
+        max-width: 300px;
+    }
+
+    /* why choose */
+    .section .first-text,
+    .section .last-text {
+        font-size: 70px;
+    }
+
+    /* feedback -> one column */
+    .feed .article {
+        grid-template-columns: 1fr;
+    }
+
+    .feed .article .left {
+        width: 100%;
+        max-width: 560px;
+        margin: 0 auto;
+    }
+
+    .ice-cream {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .ice-cream .title {
+        font-size: 48px;
+        margin-bottom: 0;
+    }
+
+    .ice-cream img:last-of-type {
+        display: none;
+    }
+
+    /* lets talk -> stacked */
+    .about .first {
+        font-size: 60px;
+    }
+
+    .about .all {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .box {
+        width: 100%;
+        max-width: 460px;
+        flex: none;
+    }
+
+    /* footer */
+    .end .one {
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+
+/* =========================================================
+   <= 564px
+   ========================================================= */
+@media (max-width: 564px) {
+
+    .nav-img {
+        height: 200px;
+    }
+
+    .nav {
+        padding: 8px 15px;
+    }
+
+    .nav>a img {
+        width: 120px;
+    }
+
+    .nav .phone>span {
+        display: none;
+    }
+
+    .title h2 {
+        font-size: 30px;
+    }
+
+    /* hero selector: smaller */
+    .choses {
+        margin-top: 20px;
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .choses label {
+        padding: 8px;
+    }
+
+    .choses label img {
+        width: 56px;
+    }
+
+    /* hero */
+    .header-bg {
+        min-height: 520px;
+    }
+
+    .view1 h2,
+    .view2 h2,
+    .view3 h2 {
+        font-size: 52px;
+    }
+
+    .view1 .smallp p,
+    .view2 .smallp p,
+    .view3 .smallp p {
+        font-size: 16px;
+    }
+
+    /* categories */
+    .food {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 15px;
+    }
+
+    .food .crisp p {
+        font-size: 20px;
+    }
+
+    /* about shop */
+    .about-shop .left .text-bar h2 {
+        font-size: 32px;
+    }
+
+    .about-shop .left .text-bar .botto {
+        flex-wrap: wrap;
+    }
+
+    .about-shop .right .text-bar2 .up .text1 h3,
+    .about-shop .right .text-bar2 .down .text2 h3 {
+        font-size: 30px;
+    }
+
+    /* cards */
+    .cards .card h2 {
+        font-size: 28px;
+    }
+
+    .cards .card h3 {
+        font-size: 26px;
+    }
+
+    /* offers */
+    .off .today h2 {
+        font-size: 36px;
+    }
+
+    .off .today p {
+        font-size: 22px;
+    }
+
+    /* chefs -> one column */
+    .our-chef {
+        grid-template-columns: 1fr;
+    }
+
+    .our-chef .card {
+        max-width: 290px;
+    }
+
+    /* why choose */
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section .first-text,
+    .section .last-text {
+        font-size: 44px;
+    }
+
+    /* feedback */
+    .feed {
+        padding: 70px 15px;
+    }
+
+    .feed .article .left .text {
+        font-size: 16px;
+        padding: 45px 20px 35px;
+    }
+
+    .ice-cream .title {
+        font-size: 38px;
+    }
+
+    /* blog -> one column */
+    .blog {
+        grid-template-columns: 1fr;
+        width: 92%;
+    }
+
+    .blog .card {
+        max-width: 520px;
+        margin: 0 auto;
+    }
+
+    /* lets talk */
+    .about .first {
+        font-size: 40px;
+    }
+
+    /* footer -> stacked */
+    .end {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .end .one,
+    .end .two,
+    .end .three {
+        width: 100%;
+        padding: 20px 10px;
+    }
+}
+
+
+/* =========================================================
+   <= 400px
+   ========================================================= */
+@media (max-width: 400px) {
+
+    .nav {
+        width: 100%;
+        padding: 8px 12px;
+    }
+
+    .nav>a img {
+        width: 100px;
+    }
+
+    .nav .phone>img {
+        display: none;
+    }
+
+    .title h2 {
+        font-size: 26px;
+    }
+
+    .choses label img {
+        width: 46px;
+    }
+
+    /* hero */
+    .view1 h2,
+    .view2 h2,
+    .view3 h2 {
+        font-size: 38px;
+    }
+
+    .view1 img,
+    .view2 img,
+    .view3 img {
+        width: 90%;
+    }
+
+    /* categories */
+    .food {
+        gap: 15px 10px;
+    }
+
+    .food .crisp {
+        height: 200px;
+        padding-top: 10px;
+    }
+
+    .food .crisp p {
+        font-size: 16px;
+    }
+
+    .food .crisp h4 {
+        font-size: 11px;
+    }
+
+    /* about shop */
+    .about-shop .left .text-bar h2 {
+        font-size: 28px;
+    }
+
+    .about-shop .left .text-bar p {
+        font-size: 15px;
+    }
+
+    .about-shop .left .text-bar .botto .btn {
+        flex: 1 1 140px;
+        width: auto;
+        min-width: 140px;
+    }
+
+    /* cards -> one column */
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cards .card {
+        max-width: 340px;
+    }
+
+    /* offers */
+    .off .today h2 {
+        font-size: 32px;
+    }
+
+    .off .today .aps {
+        width: 70px;
+        height: 70px;
+    }
+
+    .off .today .aps::after {
+        font-size: 12px;
+    }
+
+    /* why choose */
+    .section .first-text,
+    .section .last-text {
+        font-size: 34px;
+    }
+
+    /* feedback */
+    .feed .article .left .text {
+        font-size: 15px;
+    }
+
+    .ice-cream .title {
+        font-size: 32px;
+    }
+
+    /* blog */
+    .blog .card .details h2 {
+        font-size: 24px;
+    }
+
+    /* lets talk */
+    .about .first {
+        font-size: 32px;
+    }
+}
+
+
+/* =========================================================
+   touch screens: show chef social icons (no hover available)
+   ========================================================= */
+@media (hover: none) {
+    .our-chef .card .img .chef-contact {
+        bottom: 10px;
+    }
+}
