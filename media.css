@@ -37,6 +37,11 @@
     font-size: min(150px, 8vw);
 }
 
+/* nav always on top of everything (chef social icons use z-index: 20) */
+.nav {
+    z-index: 1000;
+}
+
 /* hero radio inputs: hidden (labels in .choses still switch the views) */
 .header-bg>input[type="radio"] {
     display: none;
